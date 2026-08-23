@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APN Tester - UI/UX Interactive Prototype (Android & Web)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Prototype Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Prototype Control Header -->
+  <div class="proto-toolbar">
+    <div class="proto-brand">
+      <div class="logo-badge"><i class="fa-solid fa-play"></i></div>
+      <span>APN Tester UI/UX</span>
+    </div>
+
+    <!-- Interactive Mode & Role Controls -->
+    <div class="proto-controls">
+      <!-- Device Platform Toggle -->
+      <div class="control-pill-group">
+        <button class="control-btn active" id="btn-view-mobile">
+          <i class="fa-brands fa-android"></i> Android Mobile
+        </button>
+        <button class="control-btn" id="btn-view-desktop">
+          <i class="fa-solid fa-desktop"></i> Web Dashboard
+        </button>
+      </div>
+
+      <!-- User Role Toggle -->
+      <div class="control-pill-group">
+        <button class="control-btn active" id="btn-role-publisher">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Publisher
+        </button>
+        <button class="control-btn playstore" id="btn-role-tester">
+          <i class="fa-solid fa-gamepad"></i> Tester
+        </button>
+        <button class="control-btn" id="btn-role-admin">
+          <i class="fa-solid fa-shield-halved"></i> Admin
+        </button>
+      </div>
+
+      <!-- Quick Screen Jump Navigation -->
+      <div class="control-pill-group">
+        <button class="control-btn" onclick="navigateTo('onboarding')">
+          <i class="fa-solid fa-compass"></i> Onboarding
+        </button>
+        <button class="control-btn" onclick="navigateTo('dashboard')">
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+        <button class="control-btn" onclick="navigateTo('wizard')">
+          <i class="fa-solid fa-plus-circle"></i> Submit App
+        </button>
+        <button class="control-btn" onclick="navigateTo('tracker')">
+          <i class="fa-solid fa-chart-pie"></i> 14-Day Track
+        </button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="control-btn" id="btn-theme-toggle" style="background:var(--bg-input);border:1px solid var(--border-main);padding:8px 12px;">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Interactive Preview Workbench -->
+  <main class="proto-workbench">
+    
+    <!-- Phone / Desktop Device Frame Container -->
+    <div id="device-shell-container" class="phone-shell">
+      
+      <!-- Top Chrome: Android Status Bar -->
+      <div id="phone-chrome-top" class="phone-status-bar">
+        <span>09:41</span>
+        <div class="phone-notch"></div>
+        <div class="status-icons">
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-signal"></i>
+          <i class="fa-solid fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- Top Chrome: Desktop Browser Window Bar (Hidden in mobile mode) -->
+      <div id="desktop-chrome-top" class="desktop-browser-header" style="display:none;">
+        <div class="browser-dots">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+        </div>
+        <div class="browser-address-bar">
+          <i class="fa-solid fa-lock" style="color:var(--success);"></i>
+          <span>https://app.apntester.com/dashboard</span>
+        </div>
+      </div>
+
+      <!-- Dynamic App Screen Viewport -->
+      <div class="app-viewport" id="app-screen-content">
+        <!-- Content dynamically injected by app.js -->
+      </div>
+
+      <!-- Bottom Chrome: Android Gesture Nav Pill -->
+      <div id="phone-chrome-bottom" class="phone-gesture-bar">
+        <div class="gesture-pill"></div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Prototype Scripts -->
+  <script src="js/mockData.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

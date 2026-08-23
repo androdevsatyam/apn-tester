@@ -1,0 +1,92 @@
+/**
+ * APN Tester - Design Tokens CSS
+ * Supports Dark & Light modes with modern CSS variables
+ */
+
+:root {
+  /* Brand Colors */
+  --color-primary: #4F46E5;
+  --color-primary-dark: #3730A3;
+  --color-primary-light: #818CF8;
+  --color-primary-container: #EEF2FF;
+  --color-secondary: #06B6D4;
+  --color-secondary-dark: #0891B2;
+  --color-secondary-light: #67E8F9;
+  --color-playstore: #01875F;
+  --color-playstore-light: #E6F4EA;
+
+  /* Status Colors */
+  --color-success: #10B981;
+  --color-success-light: #D1FAE5;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FEF3C7;
+  --color-error: #EF4444;
+  --color-error-light: #FEE2E2;
+  --color-info: #3B82F6;
+  --color-info-light: #DBEAFE;
+
+  /* Typography */
+  --font-brand: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --trans-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Dark Theme (Default) */
+[data-theme="dark"], :root {
+  --bg-app: #0B0F19;
+  --bg-surface: #111827;
+  --bg-card: #1F2937;
+  --bg-card-hover: #374151;
+  --bg-input: #111827;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(79, 70, 229, 0.6);
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 25px rgba(79, 70, 229, 0.3);
+  --glass-bg: rgba(31, 41, 55, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-app: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F1F5F9;
+  --bg-input: #F8FAFC;
+  --border-color: #E2E8F0;
+  --border-active: #4F46E5;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 0 25px rgba(79, 70, 229, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.08);
+}

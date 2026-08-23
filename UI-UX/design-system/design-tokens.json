@@ -1,0 +1,115 @@
+{
+  "name": "APN Tester Design System Tokens",
+  "version": "1.0.0",
+  "author": "APN Tester Design Team",
+  "description": "Design tokens for Android (Jetpack Compose / Material 3) and Web applications",
+  "colors": {
+    "brand": {
+      "primary": {
+        "value": "#4F46E5",
+        "type": "color",
+        "comment": "Electric Indigo - Primary brand accent"
+      },
+      "primaryDark": {
+        "value": "#3730A3",
+        "type": "color",
+        "comment": "Dark Indigo for active states"
+      },
+      "primaryLight": {
+        "value": "#818CF8",
+        "type": "color",
+        "comment": "Light Indigo for highlights"
+      },
+      "primaryContainer": {
+        "value": "#EEF2FF",
+        "type": "color",
+        "comment": "Light background tint"
+      },
+      "secondary": {
+        "value": "#06B6D4",
+        "type": "color",
+        "comment": "Cyber Cyan - Secondary action accent"
+      },
+      "playstoreGreen": {
+        "value": "#01875F",
+        "type": "color",
+        "comment": "Google Play signature green"
+      },
+      "playstoreGreenLight": {
+        "value": "#E6F4EA",
+        "type": "color",
+        "comment": "Play Store light background tint"
+      }
+    },
+    "status": {
+      "success": {
+        "value": "#10B981",
+        "type": "color",
+        "comment": "Verification passed / Day completed"
+      },
+      "successLight": {
+        "value": "#D1FAE5",
+        "type": "color",
+        "comment": "Success badge background"
+      },
+      "warning": {
+        "value": "#F59E0B",
+        "type": "color",
+        "comment": "Testing in progress / Attention needed"
+      },
+      "warningLight": {
+        "value": "#FEF3C7",
+        "type": "color",
+        "comment": "Warning badge background"
+      },
+      "error": {
+        "value": "#EF4444",
+        "type": "color",
+        "comment": "Group access denied / Rejection"
+      },
+      "errorLight": {
+        "value": "#FEE2E2",
+        "type": "color",
+        "comment": "Error badge background"
+      },
+      "info": {
+        "value": "#3B82F6",
+        "type": "color",
+        "comment": "Pending review / Info tips"
+      },
+      "infoLight": {
+        "value": "#DBEAFE",
+        "type": "color",
+        "comment": "Info badge background"
+      }
+    },
+    "neutral": {
+      "dark": {
+        "bgPrimary": "#0B0F19",
+        "bgSecondary": "#111827",
+        "bgCard": "#1F2937",
+        "bgCardHover": "#374151",
+        "border": "#374151",
+        "textPrimary": "#F9FAFB",
+        "textSecondary": "#9CA3AF",
+        "textMuted": "#6B7280"
+      },
+      "light": {
+        "bgPrimary": "#F8FAFC",
+        "bgSecondary": "#FFFFFF",
+        "bgCard": "#FFFFFF",
+        "bgCardHover": "#F1F5F9",
+        "border": "#E2E8F0",
+        "textPrimary": "#0F172A",
+        "textSecondary": "#475569",
+        "textMuted": "#94A3B8"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "brand": "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    }
+  }
+}
