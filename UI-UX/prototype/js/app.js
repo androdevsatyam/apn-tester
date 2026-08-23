@@ -964,18 +964,19 @@ function renderMobilePublisherDashboard(root) {
   const pending = MOCK_DATA.applicationsUnderProcess[0];
 
   root.innerHTML = `
-    <header class="app-header">
-      <div class="app-logo">
-        <div class="logo-badge" style="width:28px;height:28px;font-size:13px;"><i class="fa-solid fa-play"></i></div>
-        <span>APN Tester</span>
-      </div>
-      <div class="user-badge-profile">
-        <img src="${MOCK_DATA.currentUser.avatar}" alt="Avatar">
-        <span class="user-name">${MOCK_DATA.currentUser.name}</span>
-      </div>
-    </header>
+    <div class="mobile-screen-wrapper">
+      <header class="app-header">
+        <div class="app-logo">
+          <div class="logo-badge" style="width:28px;height:28px;font-size:13px;"><i class="fa-solid fa-play"></i></div>
+          <span>APN Tester</span>
+        </div>
+        <div class="user-badge-profile">
+          <img src="${MOCK_DATA.currentUser.avatar}" alt="Avatar">
+          <span class="user-name">${MOCK_DATA.currentUser.name}</span>
+        </div>
+      </header>
 
-    <div class="dashboard-view">
+      <div class="mobile-scroll-content dashboard-view">
       <div class="metric-grid">
         <div class="metric-card success">
           <span class="metric-label">Active Testing Track</span>
@@ -1049,26 +1050,27 @@ function renderMobilePublisherDashboard(root) {
           </div>
         </div>
       ` : ''}
-    </div>
+      </div>
 
-    <nav class="mobile-bottom-nav">
-      <div class="nav-item active" onclick="navigateTo('dashboard')">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
-      </div>
-      <div class="nav-item" onclick="navigateTo('wizard')">
-        <i class="fa-solid fa-circle-plus"></i>
-        <span>Submit</span>
-      </div>
-      <div class="nav-item" onclick="navigateTo('tracker')">
-        <i class="fa-solid fa-chart-pie"></i>
-        <span>14-Day</span>
-      </div>
-      <div class="nav-item" onclick="navigateTo('onboarding')">
-        <i class="fa-solid fa-circle-question"></i>
-        <span>Guide</span>
-      </div>
-    </nav>
+      <nav class="mobile-bottom-nav">
+        <div class="nav-item active" onclick="navigateTo('dashboard')">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item" onclick="navigateTo('wizard')">
+          <i class="fa-solid fa-circle-plus"></i>
+          <span>Submit</span>
+        </div>
+        <div class="nav-item" onclick="navigateTo('tracker')">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>14-Day</span>
+        </div>
+        <div class="nav-item" onclick="navigateTo('onboarding')">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>Guide</span>
+        </div>
+      </nav>
+    </div>
   `;
 }
 
@@ -1179,25 +1181,27 @@ function renderSubmissionWizard(root) {
 }
 
 function render14DayTracker(root) {
+  const isMobile = STATE.deviceMode === 'mobile';
   const app = MOCK_DATA.liveApplications[0];
 
   root.innerHTML = `
-    <header class="app-header">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <button class="btn-secondary" style="padding:6px 10px;border-radius:50%;" onclick="navigateTo('dashboard')">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <div>
-          <div style="font-weight:700;font-size:15px;">${app.name}</div>
-          <div style="font-size:11px;color:var(--text-muted);">14-Day Compliance Monitor</div>
+    <div class="mobile-screen-wrapper">
+      <header class="app-header">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button class="btn-secondary" style="padding:6px 10px;border-radius:50%;" onclick="navigateTo('dashboard')">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div>
+            <div style="font-weight:700;font-size:15px;">${app.name}</div>
+            <div style="font-size:11px;color:var(--text-muted);">14-Day Compliance Monitor</div>
+          </div>
         </div>
-      </div>
-      <button class="btn-playstore" style="padding:6px 12px;font-size:12px;" onclick="showExportCertificateModal()">
-        <i class="fa-solid fa-file-arrow-down"></i> Export
-      </button>
-    </header>
+        <button class="btn-playstore" style="padding:6px 12px;font-size:12px;" onclick="showExportCertificateModal()">
+          <i class="fa-solid fa-file-arrow-down"></i> Export
+        </button>
+      </header>
 
-    <div class="tracker-view">
+      <div class="mobile-scroll-content tracker-view">
       <div class="gauge-hero">
         <div class="radial-progress-wrapper">
           <svg width="140" height="140" viewBox="0 0 140 140">
@@ -1274,18 +1278,19 @@ function render14DayTracker(root) {
 
 function renderTesterHub(root) {
   root.innerHTML = `
-    <header class="app-header">
-      <div class="app-logo">
-        <div class="logo-badge" style="background:var(--playstore-green);"><i class="fa-solid fa-fire"></i></div>
-        <span>APN Tester Hub</span>
-      </div>
-      <div class="user-badge-profile">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&auto=format&fit=crop&q=80" alt="Avatar">
-        <span class="user-name">Alex Rivera</span>
-      </div>
-    </header>
+    <div class="mobile-screen-wrapper">
+      <header class="app-header">
+        <div class="app-logo">
+          <div class="logo-badge" style="background:var(--playstore-green);"><i class="fa-solid fa-fire"></i></div>
+          <span>APN Tester Hub</span>
+        </div>
+        <div class="user-badge-profile">
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&auto=format&fit=crop&q=80" alt="Avatar">
+          <span class="user-name">Alex Rivera</span>
+        </div>
+      </header>
 
-    <div class="tester-hub-view">
+      <div class="mobile-scroll-content tester-hub-view">
       <div class="wallet-card">
         <div>
           <div style="font-size:12px;color:#C7D2FE;font-weight:600;">Reward Wallet</div>
@@ -1349,18 +1354,19 @@ function renderTesterHub(root) {
           `).join('')}
         </div>
       </div>
-    </div>
+      </div>
 
-    <nav class="mobile-bottom-nav">
-      <div class="nav-item active" onclick="navigateTo('tester_hub')">
-        <i class="fa-solid fa-gamepad"></i>
-        <span>Tester</span>
-      </div>
-      <div class="nav-item" onclick="navigateTo('onboarding')">
-        <i class="fa-solid fa-circle-question"></i>
-        <span>Guide</span>
-      </div>
-    </nav>
+      <nav class="mobile-bottom-nav">
+        <div class="nav-item active" onclick="navigateTo('tester_hub')">
+          <i class="fa-solid fa-gamepad"></i>
+          <span>Tester</span>
+        </div>
+        <div class="nav-item" onclick="navigateTo('onboarding')">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>Guide</span>
+        </div>
+      </nav>
+    </div>
   `;
 }
 

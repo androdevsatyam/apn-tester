@@ -193,6 +193,8 @@ body {
 /* Android Phone Shell */
 .phone-shell {
   width: 412px;
+  height: 860px;
+  max-height: 860px;
   min-height: 860px;
   background: var(--bg-workbench);
   border-radius: 46px;
@@ -2358,4 +2360,35 @@ body {
   gap: 8px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   z-index: 3000;
+}
+
+/* Mobile Fixed Navigation & Layout Wrapper */
+.mobile-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-scroll-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-bottom-nav {
+  flex-shrink: 0;
+  width: 100%;
+  background: rgba(21, 28, 40, 0.98);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-main);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 12px;
+  z-index: 100;
 }
